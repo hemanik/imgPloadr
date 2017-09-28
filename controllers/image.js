@@ -47,9 +47,8 @@ module.exports = {
 				imgUrl += possible.charAt(Math.floor(Math.random() * possible.length));
 			}
 
-			console.log(req.file);
 			var tempPath = req.file.path,
-			ext = path.extname(req.file.name).toLowerCase(),
+			ext = path.extname(req.file.originalname).toLowerCase(),
 			targetPath = path.resolve('./public/upload/' + imgUrl + ext);
 
 			if (ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.gif') {
