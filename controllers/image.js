@@ -43,7 +43,7 @@ module.exports = {
 				} else {
 					var tempPath = req.file.path,
 					ext = path.extname(req.file.originalname).toLowerCase(),
-					targetPath = path.resolve('./public/upload/' + imgUrl + ext);
+					targetPath = path.resolve('./server/public/upload/' + imgUrl + ext);
 					if (ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.gif') {
 						fs.rename(tempPath, targetPath, function(err) {
 							if (err) throw err;
